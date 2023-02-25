@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/logo.png"/>
+    <link href='https://css.gg/arrow-down.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-down.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Bartosz Siedlecki Portfolio</title>
+</head>
+<body>
+    <div class="container">
+    <div class="header" id="home">
+        <h1 class="name">Bartosz Siedlecki</h1>
+        <h2 class="sub">Front End Developer Portfolio</h2>
+    </div>
+    <div class="background">
+        <div class="panel">
+            <div class="neon"></div>
+            <div class="neon two"></div>
+            <nav class="nav">
+                <ul class="nav__menu">
+                    <li class="nav__menu--option"><a href="#about">About</a></li>
+                    <li class="nav__menu--option"><a href="#projects">Projects</a></li>
+                    <li class="nav__menu--option"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="about__me">
+            <h2 class="about--header" data-aos="fade-up" 
+                data-aos-duration="1000"
+                >Hi I'm Bartosz</h2>
+            <p data-aos="fade-left" 
+                data-aos-duration="1000">
+                I'm an autodidact front-end developer who is passionate about learning. 
+                I've been coding for a while now, first as a hobby, and now it's becoming 
+                increasingly important to my future, which I find very encouraging. 
+                Every day I get to know new technologies and become better, and thanks to that, 
+                I am even more enthusiastic about what I do.
+            </p>
+            <div class="contact__me__socials--links">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <a class="mail" href="mailto: Bartosz.Siedlecki112@gmail.com">Contact me</a>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <a target="_blank" href="https://github.com/BartoszSiedlecki">
+                        <img src="/img/more/github.png" alt="github">
+                        <p>GitHub</p>
+                    </a>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <a target="_blank" href="https://drive.google.com/file/d/1uZQV-mSUyxoFYkutP0LMJcwRzaD_GzXm/view?usp=sharing">
+                        <img src="/img/more/cv.png" alt="github">
+                        <p>CV</p>
+                    </a>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <a target="_blank" href="">
+                        <img src="/img/more/linkedin.png" alt="github">
+                        <p>LinkedIn</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="about__tech">
+            <h2 class="about--header" data-aos="fade-up" data-aos-duration="1000">
+                Here's a list of technology I use
+            </h2>
+            <div class="grid-container">
+                <div data-aos="fade-left" data-aos-duration="1000">
+                    <div class="about__tech__panel">
+                        <img name="tech-img" src="/img/tech-icons/angular.svg" alt="Angular">
+                        <h3>Angular</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="about__tech__panel">
+                        <img name="tech-img" src="/img/tech-icons/ts.svg" alt="TypeScript">
+                        <h3>TypeScript</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="about__tech__panel">
+                        <img name="tech-img" src="/img/tech-icons/js.svg" alt="JavaScript">
+                        <h3>JavaScript</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="about__tech__panel">
+                        <img name="tech-img" src="/img/tech-icons/sass.svg" alt="Sass">
+                        <h3>Sass</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
+                    <div class="about__tech__panel">
+                        <img name="tech-img" src="/img/tech-icons/tw.svg" alt="Tailwind">
+                        <h3>Tailwind</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="about__tech__panel">
+                        <img name="tech-img" src="/img/tech-icons/css.svg" alt="CSS3">
+                        <h3>CSS3</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="about__tech__panel">
+                        <img name="tech-img" src="/img/tech-icons/html.svg" alt="HTML5">
+                        <h3>HTML5</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="about__tech__panel">
+                        <img name="tech-img" src="/img/tech-icons/postgres.svg" alt="PostgreSql">
+                        <h3>PostgreSQL</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="700">
+                    <div class="about__tech__panel">
+                        <img name="tech-img" src="/img/tech-icons/sql.svg" alt="MySQL">
+                        <h3>MySQL</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
+                    <div class="about__tech__panel">
+                        <img name="tech-img" src="/img/tech-icons/git.svg" alt="Git">
+                        <h3>Git</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="projects--header" data-aos="fade-up" data-aos-duration="1000">
+            Those are projects of mine
+        </h2>
+        <div class="grid-container">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <div data-project="1" class="project active">
+                    <div class="projects__card">
+                        <img class="projects__card--preview" alt="project-preview" src="/img/projects/space.PNG">
+                        <div class="projects__card__info">
+                            <h2 class="projects__card__info--header">Space Tourism Website</h2>
+                            <p class="projects__card__info--desc">
+                                Responsive multi-page website built in Angular based on the FrontEndMentor challenge.
+                            </p>
+                        </div>
+                        <div class="projects__card__links">
+                            <a target="_blank" href="https://github.com/BartoszSiedlecki/Space-Tourism-Website" class="projects__card__links--link">GitHub</a>
+                            <a target="_blank" href="https://space-tourism-website-six-jade.vercel.app" class="projects__card__links--link">Website</a>
+                        </div>
+                    </div>
+                    <div class="projects__tech">
+                        <div class="tech">
+                            <a href="#about"><img name="project-tech" src="/img/tech-icons/angular.svg" alt="Angular"></a>
+                        </div>
+                        <div class="tech">
+                            <a href="#about"><img name="project-tech" src="/img/tech-icons/ts.svg" alt="TypeScript"></a>
+                        </div>
+                        <div class="tech">
+                            <a href="#about"><img name="project-tech" src="/img/tech-icons/sass.svg" alt="Sass"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1000">
+                <div data-project="2" class="project">
+                    <div class="projects__card">
+                        <img class="projects__card--preview" alt="project-preview" src="/img/projects/form.PNG">
+                        <div class="projects__card__info">
+                            <h2 class="projects__card__info--header">Multi-step Form</h2>
+                            <p class="projects__card__info--desc">
+                                Multi-step form that allows for submitting the wanted plan. Made as a practice to handle forms and their security.
+                            </p>
+                        </div>
+                        <div class="projects__card__links">
+                            <a target="_blank" href="https://github.com/BartoszSiedlecki/Multi-Step-Form" class="projects__card__links--link">GitHub</a>
+                            <a target="_blank" href="https://multi-step-form-5fosrha6r-bartoszsiedlecki.vercel.app" class="projects__card__links--link">Website</a>
+                        </div>
+                    </div>
+                    <div class="projects__tech">
+                        <div class="tech">
+                            <a href="#about"><img name="project-tech" src="/img/tech-icons/js.svg" alt="JavaScript"></a>
+                        </div>
+                        <div class="tech">
+                            <a href="#about"><img name="project-tech" src="/img/tech-icons/css.svg" alt="CSS3"></a>
+                        </div>
+                        <div class="tech">
+                            <a href="#about"><img name="project-tech" src="/img/tech-icons/html.svg" alt="HTML5"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <div data-project="3" class="project">
+                    <div class="projects__card">
+                        <img class="projects__card--preview" alt="project-preview" src="/img/projects/countries.PNG">
+                        <div class="projects__card__info">
+                            <h2 class="projects__card__info--header">NgCountriesApi</h2>
+                            <p class="projects__card__info--desc">
+                                Angular API country database with search and filtering capabilities. Providing an additional page with details and dark mode
+                            </p>
+                        </div>
+                        <div class="projects__card__links">
+                            <a target="_blank" href="https://github.com/BartoszSiedlecki/Ng-Countries-Api" class="projects__card__links--link">GitHub</a>
+                            <a target="_blank" href="https://ng-countries-api.vercel.app" class="projects__card__links--link">Website</a>
+                        </div>
+                    </div>
+                    <div class="projects__tech">
+                        <div class="tech">
+                            <a href="#about"><img name="project-tech" src="/img/tech-icons/angular.svg" alt="Angular"></a>
+                        </div>
+                        <div class="tech">
+                            <a href="#about"><img name="project-tech" src="/img/tech-icons/ts.svg" alt="TypeScript"></a>
+                        </div>
+                        <div class="tech">
+                            <a href="#about"><img name="project-tech" src="/img/tech-icons/sass.svg" alt="Sass"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1000">
+                <div data-project="4" class="project">
+                    <div class="projects__card">
+                        <img class="projects__card--preview" alt="project-preview" src="/img/projects/sneakers.PNG">
+                        <div class="projects__card__info">
+                            <h2 class="projects__card__info--header">Sneakers Product Page</h2>
+                            <p class="projects__card__info--desc">
+                                Responsive single product page made to handle scripting basic shopping ideas
+                            </p>
+                        </div>
+                        <div class="projects__card__links">
+                            <a target="_blank" href="https://github.com/BartoszSiedlecki/E-Commerce-Product-Page" class="projects__card__links--link">GitHub</a>
+                            <a target="_blank" href="https://e-commerce-product-page-tau.vercel.app" class="projects__card__links--link">Website</a>
+                        </div>
+                    </div>
+                    <div class="projects__tech">
+                        <div class="tech">
+                            <a href="#about"><img name="project-tech" src="/img/tech-icons/js.svg" alt="JavaScript"></a>
+                        </div>
+                        <div class="tech">
+                            <a href="#about"><img name="project-tech" src="/img/tech-icons/sass.svg" alt="Sass"></a>
+                        </div>
+                        <div class="tech">
+                            <a href="#about"><img name="project-tech" src="/img/tech-icons/html.svg" alt="HTML5"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel">
+            <button data-value="1" class="carousel__button active"></button>
+            <button data-value="2" class="carousel__button"></button>
+            <button data-value="3" class="carousel__button"></button>
+            <button data-value="4" class="carousel__button"></button>
+        </div>
+        <a class="projects--header projects--header--more" target="_blank" href="https://github.com/BartoszSiedlecki">
+             More projects
+        </a>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact__pop-up" id="contact-alert">
+            <h3>Message has been sent</h3>
+        </div>
+        <form class="contact__me" id="contact-form">
+            <h3 class="contact__me--header">Does that sound intresting?</h3>
+            <h4 class="contact__me--sub">Contact me</h4>
+            <label class="contact__me--name">
+                <input id="first-name" class="contact__me__input" type="text" placeholder="First Name*" required>
+                <input id="last-name" class="contact__me__input" type="text" placeholder="Last Name*" required>
+            </label>
+            <input id="email" class="contact__me__input long" type="email" placeholder="Email Adress*" required>
+            <textarea id="message" placeholder="Type your message here*" class="contact__me__input message" required></textarea>
+            <div class="contact__me__socials">
+                <input class="contact__me__submit" type="submit" value="Send Message">
+                <div class="contact__me__socials--links">
+                    <a target="_blank" href="https://github.com/BartoszSiedlecki">
+                        <img src="/img/more/github.png" alt="github">
+                        <p>GitHub</p>
+                    </a>
+                    <a target="_blank" href="https://drive.google.com/file/d/1uZQV-mSUyxoFYkutP0LMJcwRzaD_GzXm/view?usp=sharing">
+                        <img src="/img/more/cv.png" alt="github">
+                        <p>CV</p>
+                    </a>
+                    <a target="_blank" href="">
+                        <img src="/img/more/linkedin.png" alt="github">
+                        <p>LinkedIn</p>
+                    </a>
+                </div>
+            </div>
+        </form>  
+        <a href="#home" class="go-up">
+            <i class="gg-arrow-down"></i>
+        </a>
+    </section>
+    <footer>
+        <p>© Bartosz Siedlecki 2023</p>
+    </footer>
+</div>
+</body>
+</html>
