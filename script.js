@@ -77,20 +77,24 @@ const fadeInAnimation = [
     { opacity: 1 }
 ];
 
+let buttonValue = 1
+
 carouselBtns.forEach(button => {
-    button.addEventListener("click", e =>{
-        resetButtons()
-        resetProjects()
-        let buttonValue = button.attributes[0].value
-        button.classList.add("active")
-        projectList.forEach(project => {
-            if(project.attributes[0].value === buttonValue){
-                project.classList.add("active")
-                project.animate(fadeInAnimation, 1000)
-            }
-        })
-    })
+    button.addEventListener("click", e => changeProject(button))
 });
+
+function changeProject(button){
+    resetButtons()
+    resetProjects()
+    buttonValue = button.attributes[0].value
+    button.classList.add("active")
+    projectList.forEach(project => {
+        if(project.attributes[0].value === buttonValue){
+            project.classList.add("active")
+            project.animate(fadeInAnimation, 1000)
+        }
+    })
+}
 
 function resetButtons(){
     carouselBtns.forEach(button => {
@@ -103,3 +107,9 @@ function resetProjects(){
         project.classList.remove("active")
     })
 }
+
+projectList.forEach(project => {
+    project.addEventListener("swipe", e =>{
+        console.log("swipe")
+    })
+})
