@@ -220,7 +220,7 @@ body{
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        width: 37rem;
+        width: 40rem;
 
         p{
             font-size: 1.15rem;
@@ -379,7 +379,6 @@ body{
             cursor: pointer;
 
             &:hover{
-                
                 transform: rotate(10deg);
             }
 
@@ -399,12 +398,19 @@ body{
         justify-content: space-between;
         background: rgb(23,23,23);
         z-index: 5;
+        overflow: hidden;
 
         &--preview{
             width: 100%;
             height: 50%;
             object-fit: cover;
             object-position: center;
+            transition: ease-in-out .2s;
+            cursor: pointer;
+
+            &:hover{
+                transform: scale(105%);
+            }
         }
 
         &__info{
@@ -459,6 +465,30 @@ body{
             }
         }
     }
+
+    .lightbox-container{
+        opacity: 0;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 100vh;
+        width: 100vw;
+        z-index: 10000;
+        display: grid;
+        place-items: center;
+
+        .lightbox{
+            width: 60%;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+
 }
 
 .contact{
@@ -746,6 +776,11 @@ footer{
         }
         &__tech{      
             width: 100%;
+            
+            .tech{
+                cursor: default;
+            }
+
             .grid-container{
                 width: 100%;
                 grid-template-columns: repeat( auto-fill, minmax(100px, 1fr) );
@@ -767,6 +802,16 @@ footer{
         padding-top: 2rem;
         padding-bottom: 12rem;
         box-shadow: inset 0 0 15px 1px black;
+
+        &__card{
+            pointer-events: none;
+            &--preview{
+                cursor: default;
+                &:hover{
+                    transform: none;
+                }
+            }
+        }
         
         .grid-container{
             all: unset;
@@ -808,6 +853,16 @@ footer{
             .active{
                 background: orange;
                 box-shadow: 0 0 15px .1px black;
+            }
+        }
+
+        .lightbox-container{
+            display: none;
+            .lightbox{
+                &:hover{
+                    cursor: none;
+                }
+                
             }
         }
     }

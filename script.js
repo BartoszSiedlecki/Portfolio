@@ -4,7 +4,7 @@ const techIUse = document.getElementsByName("tech-img")
 const techContainers = document.querySelectorAll(".about__tech__panel")
 
 techContainers.forEach(container => {
-    container.addEventListener("mouseover", e =>{
+    container.addEventListener("mouseover", () =>{
         container.classList.remove("about__tech__panel--active")
     })
 });
@@ -14,7 +14,6 @@ projectTech.forEach(tech => {
         let techAlt = e.target.alt
         resetTech()
         techIUse.forEach(oneTech => {
-            
             if(techAlt === oneTech.alt){
                 oneTech.parentElement.classList.add("about__tech__panel--active")
             }
@@ -111,5 +110,28 @@ function resetProjects(){
 projectList.forEach(project => {
     project.addEventListener("swipe", e =>{
         console.log("swipe")
+    })
+})
+
+//handle lightbox
+const projectImgs = document.getElementsByName("project-preview")
+const lightbox = document.getElementById("projects-lightbox")
+const lightboxCont = document.getElementById("lightbox-container")
+
+projectImgs.forEach(project => {
+    project.addEventListener("click", e =>{
+        lightboxCont.style.opacity = 1
+        lightboxCont.style.pointerEvents = "all"
+        lightboxCont.animate(fadeInAnimation, 200)
+
+        let img = new Image
+        img.src = project.src
+        lightbox.append(img)
+
+        lightboxCont.addEventListener("click", e =>{
+            lightboxCont.style.opacity = 0
+            lightboxCont.style.pointerEvents = "none"
+            lightbox.innerHTML = ""
+        })
     })
 })

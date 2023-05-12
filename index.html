@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/logo.png"/>
-    <link href='https://css.gg/arrow-down.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-down.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
@@ -37,16 +36,15 @@
 
     <section class="about" id="about">
         <div class="about__me">
-            <h2 class="about--header" data-aos="fade-up" 
-                data-aos-duration="1000"
-                >Hi I'm Bartosz</h2>
-            <p data-aos="fade-left" 
-                data-aos-duration="1000">
-                I'm an autodidact front-end developer who is passionate about learning. 
-                I've been coding for a while now, first as a hobby, and now it's becoming 
-                increasingly important to my future, which I find very encouraging. 
-                Every day I get to know new technologies and become better, and thanks to that, 
-                I am even more enthusiastic about what I do.
+            <h2 class="about--header" data-aos="fade-up" data-aos-duration="1000">
+                Hi I'm Bartosz
+            </h2>
+            <p data-aos="fade-left" data-aos-duration="1000">
+                As a self-taught front-end developer, I am driven by a passion for continuous learning and growth. 
+                Coding started as a simple hobby but has now taken on a significant 
+                role in shaping my future, which is incredibly encouraging.
+                Every day, I eagerly seize the opportunity to explore new technologies, 
+                driven by a strong desire to improve my skills and expand my knowledge.
             </p>
             <div class="contact__me__socials--links">
                 <div data-aos="fade-right" data-aos-duration="1000">
@@ -145,11 +143,14 @@
         <h2 class="projects--header" data-aos="fade-up" data-aos-duration="1000">
             Those are projects of mine
         </h2>
+        <div id="lightbox-container" class="lightbox-container">
+            <div id="projects-lightbox" class="lightbox"></div>
+        </div>
         <div class="grid-container" id="swipe-area">
             <div data-aos="fade-right" data-aos-duration="1000">
-                <div data-project="4" class="project">
+                <div data-project="1" class="project active">
                     <div class="projects__card">
-                        <img class="projects__card--preview" alt="project-preview" src="/img/projects/lol.PNG">
+                        <img name="project-preview" class="projects__card--preview" alt="project-preview" src="/img/projects/lol.PNG">
                         <div class="projects__card__info">
                             <h2 class="projects__card__info--header">HigherLowerLoLSkins</h2>
                             <p class="projects__card__info--desc">
@@ -175,9 +176,9 @@
                 </div>
             </div>
             <div data-aos="fade-right" data-aos-duration="1000">
-                <div data-project="1" class="project active">
+                <div data-project="2" class="project">
                     <div class="projects__card">
-                        <img class="projects__card--preview" alt="project-preview" src="/img/projects/space.PNG">
+                        <img name="project-preview" class="projects__card--preview" alt="project-preview" src="/img/projects/space.PNG">
                         <div class="projects__card__info">
                             <h2 class="projects__card__info--header">Space Tourism Website</h2>
                             <p class="projects__card__info--desc">
@@ -203,9 +204,9 @@
                 </div>
             </div>
             <div data-aos="fade-left" data-aos-duration="1000">
-                <div data-project="2" class="project">
+                <div data-project="3" class="project">
                     <div class="projects__card">
-                        <img class="projects__card--preview" alt="project-preview" src="/img/projects/form.PNG">
+                        <img name="project-preview" class="projects__card--preview" alt="project-preview" src="/img/projects/form.PNG">
                         <div class="projects__card__info">
                             <h2 class="projects__card__info--header">Multi-step Form</h2>
                             <p class="projects__card__info--desc">
@@ -231,9 +232,9 @@
                 </div>
             </div>
             <div data-aos="fade-left" data-aos-duration="1000">
-                <div data-project="3" class="project">
+                <div data-project="4" class="project">
                     <div class="projects__card">
-                        <img class="projects__card--preview" alt="project-preview" src="/img/projects/countries.PNG">
+                        <img name="project-preview" class="projects__card--preview" alt="project-preview" src="/img/projects/countries.PNG">
                         <div class="projects__card__info">
                             <h2 class="projects__card__info--header">NgCountriesApi</h2>
                             <p class="projects__card__info--desc">
