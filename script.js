@@ -38,22 +38,28 @@ const contactAlert = document.getElementById("contact-alert")
 contactForm.addEventListener("submit", (e) =>{
     e.preventDefault()
 
-    Email.send({
-        SecureToken: "b434e06b-5ac3-46f3-aa29-36e083eea0cf",
-        Host : "smtp.elasticemail.com",
-        Username : "Bartosz.Siedlecki112@gmail.com",
-        Password : "4BEEA562BDA0992DAF5D6B8BA32A537B45D1",
-        To : 'bartoszsiedlecki.inf@gmail.com',
-        From : 'bartoszsiedlecki.inf@gmail.com',
-        Subject : "Portfolio message",
-        Body : "Name: " + firstName.value + " " + lastName.value +
-                "<br> Email: " + email.value +
-                "<br> Message: " + message.value
-    }).then(
-        afterMail(),
-        message => alert(message)
-    );
-})
+    const formData = {
+        name: firstName.value,
+        surname: lastName.value,
+        email: email.value,
+        message: message.value
+    }
+
+    fetch("http://localhost:3000/contact-form", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+    })
+    .catch(error => {
+      console.error("Error:", error);
+    });
+});
 
 function afterMail(){
     contactAlert.classList.add("contact__pop-up--active")

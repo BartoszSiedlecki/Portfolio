@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Bartosz Siedlecki Portfolio Website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/logo.png"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -63,7 +64,7 @@
                     </a>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <a target="_blank" href="">
+                    <a target="_blank" href="https://www.linkedin.com/in/bartosz-siedlecki-b97585236/">
                         <img src="/img/more/linkedin.png" alt="github">
                         <p>LinkedIn</p>
                     </a>
@@ -261,10 +262,10 @@
             </div>
         </div>
         <div class="carousel">
-            <button data-value="1" class="carousel__button active"></button>
-            <button data-value="2" class="carousel__button"></button>
-            <button data-value="3" class="carousel__button"></button>
-            <button data-value="4" class="carousel__button"></button>
+            <button data-value="1" class="carousel__button active" aria-label="1project"></button>
+            <button data-value="2" class="carousel__button" aria-label="2project"></button>
+            <button data-value="3" class="carousel__button" aria-label="3project"></button>
+            <button data-value="4" class="carousel__button" aria-label="4project"></button>
         </div>
         <a class="projects--header projects--header--more" target="_blank" href="https://github.com/BartoszSiedlecki">
              More projects
@@ -275,15 +276,15 @@
         <div class="contact__pop-up" id="contact-alert">
             <h3>Message has been sent</h3>
         </div>
-        <form class="contact__me" id="contact-form">
+        <form class="contact__me" id="contact-form" action="http://localhost:3000/contact-form" method="POST">
             <h3 class="contact__me--header">Does that sound intresting?</h3>
             <h4 class="contact__me--sub">Contact me</h4>
             <label class="contact__me--name">
-                <input id="first-name" class="contact__me__input" type="text" placeholder="First Name*" required>
-                <input id="last-name" class="contact__me__input" type="text" placeholder="Last Name*" required>
+                <input id="first-name" class="contact__me__input" type="text" name="name" placeholder="First Name*" required>
+                <input id="last-name" class="contact__me__input" type="text" name="surname" placeholder="Last Name*" required>
             </label>
-            <input id="email" class="contact__me__input long" type="email" placeholder="Email Adress*" required>
-            <textarea id="message" placeholder="Type your message here*" class="contact__me__input message" required></textarea>
+            <input id="email" class="contact__me__input long" type="email" name="email" placeholder="Email Adress*" required>
+            <textarea id="message" placeholder="Type your message here*" class="contact__me__input message" name="message" required></textarea>
             <div class="contact__me__socials">
                 <input class="contact__me__submit" type="submit" value="Send Message">
                 <div class="contact__me__socials--links">
@@ -295,14 +296,14 @@
                         <img src="/img/more/cv.png" alt="github">
                         <p>CV</p>
                     </a>
-                    <a target="_blank" href="">
+                    <a target="_blank" href="https://www.linkedin.com/in/bartosz-siedlecki-b97585236/">
                         <img src="/img/more/linkedin.png" alt="github">
                         <p>LinkedIn</p>
                     </a>
                 </div>
             </div>
         </form>  
-        <a href="#home" class="go-up">
+        <a href="#home" class="go-up" aria-label="Go back to the beginning">
             <i class="gg-arrow-down"></i>
         </a>
     </section>
