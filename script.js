@@ -45,7 +45,7 @@ contactForm.addEventListener("submit", (e) =>{
         message: message.value
     }
 
-    fetch("http://localhost:3000/contact-form", {
+    fetch("https://portfolio-server-5x50.onrender.com/contact-form", {
         method: "POST",
         headers: {
         "Content-Type": "application/json"
