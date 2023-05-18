@@ -477,6 +477,7 @@ body {
 }
 .contact__pop-up {
   position: absolute;
+  z-index: 1000;
   left: 0;
   bottom: 0;
   height: 300px;
@@ -490,7 +491,7 @@ body {
   padding: 1rem;
   padding-top: 5rem;
   padding-right: 5rem;
-  transform: rotate(-90deg) translateY(-100%);
+  transform: rotate(-90deg) translateY(-100%) scale(0%);
   cursor: pointer;
   transition: ease-in-out 0.5s;
 }
@@ -498,7 +499,7 @@ body {
   box-shadow: 0 0 15px 1px orange;
 }
 .contact__pop-up--active {
-  transform: rotate(0) translateY(0);
+  transform: rotate(0) translateY(0) scale(100%);
 }
 .contact__mail {
   flex: 1;
@@ -809,6 +810,19 @@ footer {
   }
   .contact {
     padding-bottom: 0;
+  }
+  .contact__pop-up {
+    position: fixed;
+    bottom: 0;
+    border-radius: 0;
+    height: 40px;
+    width: 100%;
+    padding: 0;
+    font-size: 0.8rem;
+    transform: rotate(0) translateX(-100%);
+  }
+  .contact__pop-up--active {
+    transform: translateX(0) scale(100%);
   }
   .contact__me {
     align-items: center;

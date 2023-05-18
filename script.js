@@ -7,7 +7,7 @@ techContainers.forEach(container => {
     container.addEventListener("mouseover", () =>{
         container.classList.remove("about__tech__panel--active")
     })
-});
+})
 
 projectTech.forEach(tech => {
     tech.addEventListener("click", e =>{
@@ -19,7 +19,7 @@ projectTech.forEach(tech => {
             }
         })
     })
-});
+})
 
 function resetTech(){
     techIUse.forEach(oneTech => {
@@ -54,12 +54,12 @@ contactForm.addEventListener("submit", (e) =>{
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+        afterMail()
     })
     .catch(error => {
-      console.error("Error:", error);
-    });
-});
+      console.error("Error:", error)
+    })
+})
 
 function afterMail(){
     contactAlert.classList.add("contact__pop-up--active")
@@ -70,7 +70,7 @@ contactAlert.addEventListener("click", e =>{
 })
 
 //handle scroll animations
-AOS.init();
+AOS.init()
 
 
 //handle mobile project carousel
@@ -80,13 +80,13 @@ const projectList = document.querySelectorAll("[data-project]")
 const fadeInAnimation = [
     { opacity: 0 },
     { opacity: 1 }
-];
+]
 
 let buttonValue = 1
 
 carouselBtns.forEach(button => {
     button.addEventListener("click", e => changeProject(button))
-});
+})
 
 function changeProject(button){
     resetButtons()
